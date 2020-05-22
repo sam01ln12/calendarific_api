@@ -4,7 +4,6 @@ class Calendar {
     constructor(url, api_key) {
         this.url = url;
         this.api_key = api_key;
-        this.state = {}
     }
 
     //https://calendarific.com/api/v2/holidays?&api_key=ae861d1de3c14a0f8922e45f84bdae1dde18e9a0&country=US&year=2019

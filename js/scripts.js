@@ -7,7 +7,7 @@ class Calendar {
         this.state = {}
     }
 
-    //https://calendarific.com/api/v2/holidays?&api_key=ae861d1de3c14a0f8922e45f84bdae1dde18e9a0&country=US&year=2020
+    //https://calendarific.com/api/v2/holidays?&api_key=ae861d1de3c14a0f8922e45f84bdae1dde18e9a0&country=US&year=2019
 
 
     search(keyword) {
@@ -22,20 +22,22 @@ class Calendar {
                     data.forEach(element => { 
                         if (element.locations == "All") {
                         document.querySelector("#main").innerHTML += render_data_to_dom(element)
+                        calendar_storage(keyword, data);
                     }
             
         });
             })
     }
+    
 }
 render_data_to_dom = (data) => {
     return `
         <div class="col-md-6">
-        <p><strong>Name :</strong> <small class = "holiday_name">${data.name}</small></p>
-        <p><strong>Description :</strong> <small class = "desc">${data.description}</small></p>
-        <p><strong>Country :</strong> <small class = "country">${data.country.name}</small></p>
-        <p><strong>Date :</strong> <small class = "date">${data.date.datetime.day} . ${data.date.datetime.month} . ${data.date.datetime.year}</small></p>
-        <p><strong>Type :</strong> <small class = "holiday_type">${data.type}</small></p>
+        <p><strong>Name : </strong> <small class = "holiday_name">${data.name}</small></p>
+        <p><strong>Description : </strong> <small class = "desc">${data.description}</small></p>
+        <p><strong>Country : </strong> <small class = "country">${data.country.name}</small></p>
+        <p><strong>Date : </strong> <small class = "date">${data.date.datetime.day} . ${data.date.datetime.month} . ${data.date.datetime.year}</small></p>
+        <p><strong>Type : </strong> <small class = "holiday_type">${data.type}</small></p>
         <hr>
         </div> `;
 }

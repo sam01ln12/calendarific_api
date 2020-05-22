@@ -22,7 +22,9 @@ class Calendar {
                     data.forEach(element => { 
                         if (element.locations == "All") {
                         document.querySelector("#main").innerHTML += render_data_to_dom(element)
-                        calendar_storage(keyword, data);
+                        calendar_storage(keyword, element);
+                        calendar_get(keyword);
+
                     }
             
         });
@@ -40,5 +42,23 @@ render_data_to_dom = (data) => {
         <p><strong>Type : </strong> <small class = "holiday_type">${data.type}</small></p>
         <hr>
         </div> `;
+}
+
+render_data_to_table = (data, index) => {
+    return `
+        <tr class = "info_row">
+
+        <td>
+            ${index}
+        </td>
+        <td>
+            ${data}
+        </td>
+        <td>
+            ${data.length}
+        </td>
+                                
+        </tr>
+    `;
 }
 

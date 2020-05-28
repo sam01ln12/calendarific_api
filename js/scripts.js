@@ -35,14 +35,14 @@ class Calendar {
 }
 
 render_data_to_dom = (data) => {
+    
 return ` <div class="col-md-6">
-<div class="card mb-3">
+<div class="card mb-3 img_inline">
   <h3 class="card-header">Holiday</h3>
   <div class="card-body">
     <h5 class="card-title">${data.name}</h5>
-    
-  </div>
-  <img style="height: 200px; width: 100%; display: block;" src="https://www.worldometers.info/img/flags/${data.country.id}-flag.gif" alt="Card image">
+</div>
+  <img class="card-img" src="https://www.worldometers.info/img/flags/${data.country.id}-flag.gif" alt="Card image">
   <div class="card-body">
     <p class="card-text">Description: ${data.description}</p>
   </div>
@@ -52,7 +52,8 @@ return ` <div class="col-md-6">
     <li class="list-group-item">Date: ${data.date.datetime.day} . ${data.date.datetime.month} . ${data.date.datetime.year}</li>
   </ul>
 </div>
-</div>`;
+</div>
+`;
 }
 
 render_data_to_table = (data, index) => {

@@ -1,25 +1,19 @@
 calendar_storage = (keyword, data)=> { 
-    let holidays = calendar_get();
-    holidays.push(JSON.stringify({country:data.country.name, data:data}));
-    window.localStorage.setItem(keyword, holidays);
+    
+    window.localStorage.setItem(keyword, JSON.stringify(data));
 
 }
 
 
-calendar_get =  (keyword) => {
-    let i = 0;
-
+calendar_get = (keyword) => {
     let holidays = localStorage.getItem(keyword);
+    let entry = JSON.parse(holidays);
+    let countryName = entry[0].country.name;
+    let holidaysNum = entry.length;
 
-    if(holidays == undefined) {
-        holidays = [];
-    } 
-    else {
-    holidays = holidays.split(",");
-    }
-    document.querySelector(".body_of_table").innerHTML = render_data_to_table(holidays.slice(0, 1), ++i);
-    return holidays;
-
-    
+    let searchTable = document.querySelector(".body_of_table");
+    let searchIndex = searchTable.childElementCount + 1;
+    let newHoliday = render_data_to_table(searchIndex, countryName, holidaysNum);
+    searchTable.innerHTML += newHoliday;
 }
 

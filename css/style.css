@@ -18,7 +18,17 @@
 .col-md-6 {
     padding: 10px;
 }
-.holiday_name, .desc, .country, .date, .holiday_type {
-    color: red;
-    font-size: 15px;
+
+.img_inline{
+    text-align:center;
+
+}
+.card-img{
+    height:200px;
+    width:90%;
+    border-radius:5%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    
 }

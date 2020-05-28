@@ -18,13 +18,15 @@ class Calendar {
         
                     data=data.response.holidays;
                     document.querySelector("#main").innerHTML = "";
+                    calendar_storage(keyword, data);
+                    calendar_get(keyword, data);
+                    
 
 
                     data.forEach(element => { 
                         if (element.locations == "All") {
                         document.querySelector("#main").innerHTML += render_data_to_dom(element)
-                        calendar_storage(keyword, element);
-                        calendar_get(keyword);
+                        
 
                     }
             
@@ -34,11 +36,16 @@ class Calendar {
     
 }
 
+var months = [ "January", "February", "March", "April", "May", "June", 
+           "July", "August", "September", "October", "November", "December" ];
+
+
 render_data_to_dom = (data) => {
+    var selectedMonthName = months[data.date.datetime.month - 1];
     
 return ` <div class="col-md-6">
 <div class="card mb-3 img_inline">
-  <h3 class="card-header">Holiday</h3>
+<h3 class="card-header">${selectedMonthName}</h3>
   <div class="card-body">
     <h5 class="card-title">${data.name}</h5>
 </div>
@@ -56,20 +63,19 @@ return ` <div class="col-md-6">
 `;
 }
 
-render_data_to_table = (data, index) => {
+render_data_to_table = (searchIndex, countryName, holidaysNum) => {
     return `
         <tr class = "info_row">
 
         <td>
-            ${index}
+            ${searchIndex}
         </td>
         <td>
-            ${data}
+            ${countryName}
         </td>
         <td>
-            ${data.length}
+            ${holidaysNum}
         </td>
-                                
         </tr>
     `;
 }

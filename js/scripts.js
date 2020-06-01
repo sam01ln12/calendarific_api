@@ -65,11 +65,9 @@ return ` <div class="col-md-6">
 
 render_data_to_table = (searchIndex, countryName, holidaysNum) => {
     return `
-        <tr class = "info_row">
+        <tr class = "info_row table-success">
 
-        <td>
-            ${searchIndex}
-        </td>
+        <th scope="row">${searchIndex}</th>
         <td>
             ${countryName}
         </td>

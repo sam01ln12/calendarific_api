@@ -1,7 +1,6 @@
 .selectpicker{
-    width:100%;
+    width:90%;
     height:30px;
-    margin: 10px;
 }
 
 
@@ -10,8 +9,9 @@
     margin-bottom: 20px;
 }
 
-.col-md-6 , .col-md-3{
+.col-md-6 , .col-md-3, .col-md-2{
     padding: 10px;
+    margin: 10px;
 }
 
 .img_inline{

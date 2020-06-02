@@ -9,8 +9,8 @@ class Calendar {
     //https://calendarific.com/api/v2/holidays?&api_key=ae861d1de3c14a0f8922e45f84bdae1dde18e9a0&country=US&year=2019
 
 
-    search(keyword, flag_code, year) {
-        let url = `${this.url}?&api_key=${this.api_key}&country=${keyword}&year=${year}`;
+    search(keyword, flag_code) {
+        let url = `${this.url}?&api_key=${this.api_key}&country=${keyword}&year=${document.querySelector("#year_select").value}`;
         
         fetch(url)
             .then(resp => resp.json())

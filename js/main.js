@@ -1,12 +1,13 @@
 let url = 'https://calendarific.com/api/v2/holidays';
 let api_key = 'ae861d1de3c14a0f8922e45f84bdae1dde18e9a0';
-let year = document.querySelector("#year_select").value;
 
 
-let client = new Calendar(url, api_key, year);
+
+let client = new Calendar(url, api_key);
 
 document.querySelector("#search").addEventListener('click', (e)=> {
     let keyword = document.querySelector("#country_select").value;
+    let year = document.querySelector("#year_select").value;
     let countries = [
         {
           "code": "af",
@@ -967,5 +968,5 @@ document.querySelector("#search").addEventListener('click', (e)=> {
               break;
           }
       }
-    client.search(keyword1, flag);
+    client.search(keyword1, flag, year);
 })

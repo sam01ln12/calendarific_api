@@ -63,18 +63,30 @@ return ` <div class="col-md-4">
 `;
 }
 
-render_data_to_table = (searchIndex, countryName, holidaysNum) => {
-    return `
-        <tr class = "info_row table-success">
+let country_set = new Set();
+let checker = 0
 
-        <th scope="row">${searchIndex}</th>
-        <td>
-            ${countryName}
-        </td>
-        <td>
-            ${holidaysNum}
-        </td>
-        </tr>
-    `;
+render_data_to_table = (searchIndex, countryName, holidaysNum) => {
+    checker++;
+    country_set.add(countryName);
+    if (checker==country_set.size) {
+
+        return `
+            <tr class = "info_row table-success">
+
+            <th scope="row">${searchIndex}</th>
+            <td>
+                ${countryName}
+            </td>
+            <td>
+                ${holidaysNum}
+            </td>
+            </tr>
+        `;
+    }
+    else{
+        checker=country_set.size;
+        return ''
+    }
 }
 

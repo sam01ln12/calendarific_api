@@ -14,7 +14,7 @@
     margin: 10px;
 }
 
-.img_inline{
+.img_inline, .info_row{
     text-align:center;
 
 }

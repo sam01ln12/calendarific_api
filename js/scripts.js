@@ -9,8 +9,8 @@ class Calendar {
     //https://calendarific.com/api/v2/holidays?&api_key=ae861d1de3c14a0f8922e45f84bdae1dde18e9a0&country=US&year=2019
 
 
-    search(keyword) {
-        let url = `${this.url}?&api_key=${this.api_key}&country=${keyword}&year=2020`;
+    search(keyword, flag_code, year) {
+        let url = `${this.url}?&api_key=${this.api_key}&country=${keyword}&year=${year}`;
         
         fetch(url)
             .then(resp => resp.json())
@@ -25,7 +25,7 @@ class Calendar {
 
                     data.forEach(element => { 
                         if (element.locations == "All") {
-                        document.querySelector("#main").innerHTML += render_data_to_dom(element)
+                        document.querySelector("#main").innerHTML += render_data_to_dom(element, flag_code)
                         
 
                     }
@@ -40,16 +40,16 @@ var months = [ "January", "February", "March", "April", "May", "June",
            "July", "August", "September", "October", "November", "December" ];
 
 
-render_data_to_dom = (data) => {
+render_data_to_dom = (data, flag_code) => {
     var selectedMonthName = months[data.date.datetime.month - 1];
     
-return ` <div class="col-md-6">
+return ` <div class="col-md-4">
 <div class="card mb-3 img_inline">
 <h3 class="card-header">${selectedMonthName}</h3>
   <div class="card-body">
     <h5 class="card-title">${data.name}</h5>
 </div>
-  <img class="card-img" src="https://www.worldometers.info/img/flags/${data.country.id}-flag.gif" alt="Card image">
+  <img class="card-img" src="https://www.worldometers.info/img/flags/${flag_code}-flag.gif" alt="Card image">
   <div class="card-body">
     <p class="card-text">Description: ${data.description}</p>
   </div>

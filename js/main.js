@@ -36,7 +36,7 @@ document.querySelector("#search").addEventListener('click', (e)=> {
         },
         {
           "code": "ag",
-          "name": "Antigua And Barbuda",
+          "name": "Antigua & Barbuda",
           "flag_code":"ac"
         },
         {
@@ -111,7 +111,7 @@ document.querySelector("#search").addEventListener('click', (e)=> {
         },
         {
           "code": "ba",
-          "name": "Bosnia And Herzegovina",
+          "name": "Bosnia & Herzegovina",
           "flag_code":"bk"
         },
         {
@@ -126,7 +126,7 @@ document.querySelector("#search").addEventListener('click', (e)=> {
         },
         {
           "code": "bn",
-          "name": "Brunei Darussalam",
+          "name": "Brunei",
           "flag_code":"bx"
         },
         {
@@ -369,11 +369,6 @@ document.querySelector("#search").addEventListener('click', (e)=> {
           "flag_code":"ha"
         },
         {
-          "code": "va",
-          "name": "Holy See (Vatican City State)",
-          "flag_code":"vt"
-        },
-        {
           "code": "hn",
           "name": "Honduras",
           "flag_code":"ho"
@@ -400,7 +395,7 @@ document.querySelector("#search").addEventListener('click', (e)=> {
         },
         {
           "code": "ir",
-          "name": "Iran, Islamic Republic Of",
+          "name": "Iran",
           "flag_code":"ir"
         },
         {
@@ -454,11 +449,6 @@ document.querySelector("#search").addEventListener('click', (e)=> {
           "flag_code":"ke"
         },
         {
-          "code": "kr",
-          "name": "Korea South",
-          "flag_code":"ks"
-        },
-        {
           "code": "kw",
           "name": "Kuwait",
           "flag_code":"ku"
@@ -470,7 +460,7 @@ document.querySelector("#search").addEventListener('click', (e)=> {
         },
         {
           "code": "la",
-          "name": "Lao People's Democratic Republic",
+          "name": "Laos",
           "flag_code":"la"
         },
         {
@@ -495,7 +485,7 @@ document.querySelector("#search").addEventListener('click', (e)=> {
         },
         {
           "code": "ly",
-          "name": "Libyan Arab Jamahiriya",
+          "name": "Libya",
           "flag_code":"ly"
         },
         {
@@ -570,7 +560,7 @@ document.querySelector("#search").addEventListener('click', (e)=> {
         },
         {
           "code": "fm",
-          "name": "Micronesia, Federated States Of",
+          "name": "Micronesia",
           "flag_code":"fm"
         },
         {
@@ -745,7 +735,7 @@ document.querySelector("#search").addEventListener('click', (e)=> {
         },
         {
           "code": "st",
-          "name": "Sao Tome And Principe",
+          "name": "Sao Tome & Principe",
           "flag_code":"tp"
         },
         {
@@ -797,6 +787,11 @@ document.querySelector("#search").addEventListener('click', (e)=> {
           "code": "so",
           "name": "Somalia",
           "flag_code":"so"
+        },
+        {
+          "code": "kr",
+          "name": "South Korea",
+          "flag_code":"ks"
         },
         {
           "code": "za",
@@ -870,7 +865,7 @@ document.querySelector("#search").addEventListener('click', (e)=> {
         },
         {
           "code": "tt",
-          "name": "Trinidad And Tobago",
+          "name": "Trinidad & Tobago",
           "flag_code":"td"
         },
         {
@@ -932,6 +927,11 @@ document.querySelector("#search").addEventListener('click', (e)=> {
           "code": "vu",
           "name": "Vanuatu",
           "flag_code":"nh"
+        },
+        {
+          "code": "va",
+          "name": "Vatican",
+          "flag_code":"vt"
         },
         {
           "code": "ve",

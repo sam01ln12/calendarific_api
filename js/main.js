@@ -7,7 +7,6 @@ let client = new Calendar(url, api_key);
 
 document.querySelector("#search").addEventListener('click', (e)=> {
     let keyword = document.querySelector("#country_select").value;
-    let year = document.querySelector("#year_select").value;
     let countries = [
         {
           "code": "af",
@@ -968,5 +967,5 @@ document.querySelector("#search").addEventListener('click', (e)=> {
               break;
           }
       }
-    client.search(keyword1, flag, year);
+    client.search(keyword1, flag);
 })

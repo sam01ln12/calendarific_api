@@ -1,17 +1,33 @@
+body{
+    background-image: url('../img/paul-szewczyk-DxKMiUXirxg-unsplash.jpg');
+    background-size: cover;
+    min-height: 100vh;
+}
+
 .selectpicker{
     width:90%;
     height:30px;
+    background: rgba(255, 255,255, .3);
 }
-
+.btn{
+    background: rgba(255, 255,255, .3);
+    color: #111 ;
+    border: #111;
+}
 
 .row{
     padding: 10px;
     margin-bottom: 20px;
+    
 }
-
+.table{
+    background: rgba(255, 255,255, .3);
+    
+}
 .col-md-6 , .col-md-3, .col-md-2{
     padding: 10px;
     margin: 10px;
+    
 }
 
 .img_inline, .info_row{

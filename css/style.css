@@ -43,3 +43,8 @@ body{
     display: block;
     
 }
+
+.flag_image{
+    width: 20px;
+    height: 10px;
+}

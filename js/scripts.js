@@ -19,7 +19,7 @@ class Calendar {
                     data=data.response.holidays;
                     document.querySelector("#main").innerHTML = "";
                     calendar_storage(keyword, data);
-                    calendar_get(keyword, data);
+                    calendar_get(keyword, flag_code);
                     
 
 
@@ -66,7 +66,7 @@ return ` <div class="col-md-4">
 let country_set = new Set();
 let checker = 0
 
-render_data_to_table = (searchIndex, countryName, holidaysNum) => {
+render_data_to_table = (searchIndex, countryName, holidaysNum, flag_url) => {
     checker++;
     country_set.add(countryName);
     if (checker==country_set.size) {
@@ -80,6 +80,9 @@ render_data_to_table = (searchIndex, countryName, holidaysNum) => {
             </td>
             <td>
                 ${holidaysNum}
+            </td>
+             <td>
+            <img class ="flag_image" src="${flag_url}" alt="Flag image">
             </td>
             </tr>
         `;

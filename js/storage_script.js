@@ -1,3 +1,10 @@
+calendar_storage = (keyword, data)=> { 
+    
+    window.localStorage.setItem(keyword, JSON.stringify(data));
+
+}
+
+
 calendar_get = (keyword, flag_code) => {
     let holidays = localStorage.getItem(keyword);
     let entry = JSON.parse(holidays);
@@ -11,3 +18,4 @@ calendar_get = (keyword, flag_code) => {
     let newHoliday = render_data_to_table(searchIndex, countryName, holidaysNum, flag_url);
     searchTable.innerHTML += newHoliday;
 }
+

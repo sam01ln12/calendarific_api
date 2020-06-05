@@ -296,7 +296,7 @@ document.querySelector('.table').addEventListener('click', function(event) {
         },
         {
           "code": "ci",
-          "name": "Cote D'Ivoire",
+          "name": "Cote d'Ivoire",
           "flag_code":"iv"
         },
         {

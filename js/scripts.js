@@ -121,7 +121,7 @@ document.querySelector('.table').addEventListener('click', function(event) {
         },
         {
           "code": "ag",
-          "name": "Antigua & Barbuda",
+          "name": "Antigua and Barbuda",
           "flag_code":"ac"
         },
         {

@@ -72,13 +72,13 @@ render_data_to_table = (searchIndex, countryName, holidaysNum, flag_url) => {
             <tr class = "info_row table-success">
 
             <th scope="row">${searchIndex}</th>
-            <td>
+            <td class = "country_name">
                 ${countryName}
             </td>
             <td>
                 ${holidaysNum}
             </td>
-             <td>
+            <td>
             <img class ="flag_image" src="${flag_url}" alt="Flag image">
             </td>
             </tr>

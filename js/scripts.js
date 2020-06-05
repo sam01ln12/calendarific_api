@@ -45,18 +45,15 @@ render_data_to_dom = (data, flag_code) => {
     
 return ` <div class="col-md-4">
 <div class="card mb-3 img_inline">
-<h3 class="card-header">${selectedMonthName}</h3>
+<h3 class="card-header">${data.name}</h3>
+  <img class="card-img" src="img/${selectedMonthName}.jpg" alt="Card image">
   <div class="card-body">
-    <h5 class="card-title">${data.name}</h5>
-</div>
-  <img class="card-img" src="https://www.worldometers.info/img/flags/${flag_code}-flag.gif" alt="Card image">
-  <div class="card-body">
-    <p class="card-text">Description: ${data.description}</p>
+    <p class="card-text"><b>Description: </b> ${data.description}</p>
   </div>
   <ul class="list-group list-group-flush">
-    <li class="list-group-item">Type: ${data.type}</li>
+    <li class="list-group-item"><b>Type: </b> ${data.type}</li>
     
-    <li class="list-group-item">Date: ${data.date.datetime.day} . ${data.date.datetime.month} . ${data.date.datetime.year}</li>
+    <li class="list-group-item"><b>Date: </b> ${data.date.datetime.day} . ${data.date.datetime.month} . ${data.date.datetime.year}</li>
   </ul>
 </div>
 </div>

@@ -104,15 +104,14 @@ render_data_to_table = (searchIndex, countryName, holidaysNum, flag_url) => {
 document.querySelector('.table').addEventListener('click', function(event) {
     if (event.target.className == 'country_name') {
       country_name = event.target.innerHTML.trim();
-      let keyword1 = country_name.charAt(0).toUpperCase() + country_name.slice(1);
       let flag;
       for (let i = 0; i<countries.length; i++) {
-          if (keyword1 == countries[i].name) {
-              keyword1 = countries[i].code;
+          if (country_name == countries[i].name) {
+              country_name = countries[i].code;
               flag = countries[i].flag_code;
               break;
           }
       }
-    client.search(keyword1, flag);
+    client.search(country_name, flag);
     }
   });

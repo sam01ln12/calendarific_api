@@ -53,3 +53,51 @@ body{
 b{
     color:red;
 }
+.country_name:hover{
+    cursor: pointer;
+}
+
+h3{
+    height: 110px;
+    text-align: center;   
+}
+
+.card-container {
+    display: grid;
+    perspective: 700px;
+}
+.card-flip {
+    display: grid; grid-template: 1fr / 1fr;
+    grid-template-areas: "frontAndBack";
+    transform-style: preserve-3d;
+    transition: all 0.7s ease;
+}
+.front {
+    grid-area: frontAndBack;
+}
+
+.back {
+    grid-area: frontAndBack;
+    transform: rotateY(-180deg);
+}
+
+.card-flip, .card-container {
+    transform-style: preserve-3d;
+    transition: all 0.7s ease;
+}
+
+.card-flip div {
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+}
+
+
+.card-container:hover .card-flip {
+    transform: rotateY(180deg);
+}
+.card-text{
+    padding-top: 100px;
+    font-size: 1.5em;
+}
+
+

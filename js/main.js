@@ -959,15 +959,13 @@ let countries = [
 
 document.querySelector("#search").addEventListener('click', (e)=> {
     let keyword = document.querySelector("#country_select").value;
-    
-      let keyword1 = keyword.charAt(0).toUpperCase() + keyword.slice(1);
       let flag;
       for (let i = 0; i<countries.length; i++) {
-          if (keyword1 == countries[i].name) {
-              keyword1 = countries[i].code;
+          if (keyword == countries[i].name) {
+              keyword = countries[i].code;
               flag = countries[i].flag_code;
               break;
           }
       }
-    client.search(keyword1, flag);
+    client.search(keyword, flag);
 })

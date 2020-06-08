@@ -43,20 +43,31 @@ var months = [ "January", "February", "March", "April", "May", "June",
 render_data_to_dom = (data, flag_code) => {
     var selectedMonthName = months[data.date.datetime.month - 1];
     
-return ` <div class="col-md-4">
-<div class="card mb-3 img_inline">
-<h3 class="card-header">${data.name}</h3>
-  <img class="card-img" src="img/${selectedMonthName}.jpg" alt="Card image">
-  <div class="card-body">
-    <p class="card-text"><b>Description: </b> ${data.description}</p>
-  </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item"><b>Type: </b> ${data.type}</li>
-    
-    <li class="list-group-item"><b>Date: </b> ${data.date.datetime.day} . ${data.date.datetime.month} . ${data.date.datetime.year}</li>
-  </ul>
-</div>
-</div>
+return ` <div class="col-md-4 card-container">
+    <div class="card-flip">
+    <div class = "card front">
+    <div class="card mb-3 img_inline">
+    <h3 class="card-header">${data.name}</h3>
+      <img class="card-img" src="img/${selectedMonthName}.jpg" alt="Card image">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><b>Type: </b> ${data.type}</li>
+        
+        <li class="list-group-item"><b>Date: </b> ${data.date.datetime.day} . ${data.date.datetime.month} . ${data.date.datetime.year}</li>
+      </ul>
+    </div>
+    </div>
+
+    <div class = "card back">
+    <div class="card mb-3 img_inline">
+      <div class="card-body">
+        <p class="card-text"><b>Description: </b> ${data.description}</p>
+      </div>
+    </div>
+    </div>
+
+
+    </div>
+    </div>
 `;
 }
 

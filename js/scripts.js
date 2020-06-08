@@ -43,7 +43,7 @@ var months = [ "January", "February", "March", "April", "May", "June",
 render_data_to_dom = (data, flag_code) => {
     var selectedMonthName = months[data.date.datetime.month - 1];
     
-return ` <div class="col-md-4 card-container">
+return ` <div class="col-md-6 card-container">
     <div class="card-flip">
     <div class = "card front">
     <div class="card mb-3 img_inline">
